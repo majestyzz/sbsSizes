@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'roboto';
+  box-sizing: border-box;
+}
+
+@import "blocks/conditions";
+@import "blocks/grid";
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/walls";
+@import "blocks/calc-size";
+@import "blocks/tab.scss";
+@import "blocks/modal";

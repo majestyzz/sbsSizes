@@ -1,0 +1,32 @@
+.tab {
+  width: 370px;
+  &__items {
+    height: 25px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  &_active {
+    background-color: rgb(255, 205, 205);
+    border-radius: 0 10px 0 0; 
+    color: #000;
+    border: red 1px solid;
+  }
+  &__item {
+    padding: 1%;
+    height: 25px;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & .calc-size__button {
+    display: none;
+  }
+}
+

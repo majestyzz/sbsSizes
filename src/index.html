@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Расчеты SBS</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <nav class="menu">
+          <ul class="menu__items">
+            <li class="menu__item"><a href="#">Расчет стеновой плитки</a></li>
+            <li class="menu__item"><a href="#">Расчет обшивочного профиля</a></li>
+            <li class="menu__item"><a href="#">Расчет стенового профиля</a></li>
+            <li class="menu__item"><a href="#">Расчет панелей ПВХ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="hero">
+        <h1 class="hero__title">СБС Расчеты</h1>
+      </div>
+      <section class="walls">
+        <div class="container">
+          <h2 class="walls__title">Расход плитки на стены</h2>
+          <div class="walls__wrapper">
+            
+            <form class="calc-size" action="#">
+              <h3 class="title">Стены</h3>
+              <input class="calc-size__item" type="text" placeholder="введите ширину комнаты" name="width">      
+              <input class="calc-size__item" type="text" placeholder="введите длину комнаты" name="long">
+              <input class="calc-size__item" type="text" placeholder="введите высоту комнаты" name="height">
+              <button class="calc-size__button" type="submit">Посчитать</button>
+            </form>
+            <form class="walls__format">
+              <h3 class="walls__desc">Формат плитки</h3>
+              <div class="walls__choice">
+                <div class="walls__choice-item">
+                  <label for="little">30*30 / 20*40</label>
+                  <input id="little" type="radio" name="tile" checked value="little">
+                </div>
+                <div class="walls__choice-item">
+                  <label for="medium">45*45 / 30*60</label>
+                  <input id="medium" type="radio" name="tile" value="medium">
+                </div>
+                <div class="walls__choice-item">
+                  <label for="big">60*60 / 40*80</label>
+                  <input id="big" type="radio" name="tile" value="big">
+                </div>
+              </div>
+            </form>
+            <div class="tab">
+              <ul class="tab__items">
+                <li class="tab__item tab_active">Окна</li>
+                <li class="tab__item">двери</li>
+              </ul>
+              <form class="calc-size tab-wrapper" action="#">
+                <div class="tab__content">
+                  <input class="calc-size__item" placeholder="введите ширину окна" type="text" name="window-width">
+                  <input class="calc-size__item" placeholder="введите длину окна" type="text" name="window-long">
+                </div>
+                <div class="tab__content hide">
+                  <input class="calc-size__item" placeholder="введите ширину двери" type="text" name="door-width">
+                  <input class="calc-size__item" placeholder="введите длину двери" type="text" name="door-long">
+                </div>
+                <button class="calc-size__button" type="submit">Посчитать</button>
+              </form>
+            </div>
+          </div>
+          <div class="modal hide">
+            <div class="modal__overlay">
+            </div>
+            <div class="modal__wrapper ">
+              <div class="modal__close">&times;</div>
+              <p class="modal__title modal__meter">Всего нужно <span>n</span>m² плитки</p>
+              <p class="modal__title modal__clay">Нужено <span>n</span> мешков клея</p>
+              <p class="modal__title modal__seam">Нужено <span>n</span> упаковок затирки</p>
+              <p class="modal__title modal__type">Клей вида <span>n</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

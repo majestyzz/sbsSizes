@@ -1,0 +1,24 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  background: url('');
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  @media (max-width: 1199px) {
+    width: 960px;
+  }
+  @media (max-width: 991px) {
+    width: 720px;
+  }
+  @media (max-width: 767px) {
+    width: 540px; 
+  }
+  @media (max-width: 575px) {
+    width: 565px;
+    padding: 15px;
+  }
+}
