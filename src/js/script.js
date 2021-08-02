@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     heightRoomInput = document.querySelector('.calc-size [name="height"]'),
     radioAll = document.querySelectorAll('[name="tile"]'),
     widthWindowInput = document.querySelector('.calc-size [name="window-width"]'),
-    longWindowInput = document.querySelector('.calc-size [name="window-width"]'),
+    longWindowInput = document.querySelector('.calc-size [name="window-long"]'),
     widthDoorInput = document.querySelector('.calc-size [name="door-width"]'),
-    longDoorInput = document.querySelector('.calc-size [name="door-width"]'),
+    longDoorInput = document.querySelector('.calc-size [name="door-long"]'),
     buttonSub = document.querySelector('.calc-size__button'),
     modalTitle = document.querySelectorAll('.modal__title span'),
     modalVisible = document.querySelector('.modal');
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modalVisible.classList.add('hide');
       modalVisible.classList.remove('show');
     });
+    
   }
 
   function modalOpen() {
@@ -108,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
       catchData('longWindow', longWindowInput);
       catchData('widthDoor', widthDoorInput);
       catchData('longDoor', longDoorInput);
-      sizesDB.result = (((sizesDB.widthRoom + sizesDB.longRoom) * 2) * sizesDB.heightRoom) - ((longWindow *
-      heightWindow) + (widthDoor * longDoor));
+      sizesDB.result = (((sizesDB.widthRoom + sizesDB.longRoom) * 2) * sizesDB.heightRoom) - ((sizesDB.longWindow *
+      sizesDB.heightWindow) + (sizesDB.widthDoor * sizesDB.longDoor));
       modalTitle[0].innerHTML = `${sizesDB.result}`;
       modalTitle[1].innerHTML = ` ${Math.ceil(sizesDB.result / 5)}`;
       modalTitle[2].innerHTML = ` ${Math.ceil(sizesDB.result / 5)}`;
