@@ -1,5 +1,5 @@
 .walls {
-  padding: 25px 0 40px;
+  padding: 55px 0 40px;
   margin-top: 22px;
   min-height: 700px;
   background: url('../img/bg/white-fabric.png');
@@ -22,6 +22,34 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
+  }
+  @media (max-width: 991px) {
+    &__row {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__element {
+      margin-bottom: 40px;
+    }
+    &__element:nth-child(1) {
+      order: 3;
+    }
+  
+  }
+  @media (max-width: 767px) {
+      & {
+        margin-top: 7px;
+      }
+  }
+  @media (max-width: 576px) {
+    &__wrapper {
+      max-width: 550px;
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+    &__element {
+      max-width: 550px;
+    }
   }
 
 }

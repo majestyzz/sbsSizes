@@ -57,10 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
     heightRoom: 0,
     widthWindow: 0,
     longWindow: 0,
-    heightWindow: 0,
     widthDoor: 0,
     longDoor: 0,
-    heightDoor: 0,
     result: 0,
     typeClay: ['ПК-9, CM-9(не гранит) КПФ А-3 Интерьерный ответ',
       'ПК-10 CM-11 Интерьерный ответ', 'ПК-11 CM-12 КПФ-А3'
@@ -110,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       catchData('widthDoor', widthDoorInput);
       catchData('longDoor', longDoorInput);
       sizesDB.result = (((sizesDB.widthRoom + sizesDB.longRoom) * 2) * sizesDB.heightRoom) - ((sizesDB.longWindow *
-      sizesDB.heightWindow) + (sizesDB.widthDoor * sizesDB.longDoor));
+      sizesDB.longWindow) + (sizesDB.widthDoor * sizesDB.longDoor));
       modalTitle[0].innerHTML = `${sizesDB.result}`;
       modalTitle[1].innerHTML = ` ${Math.ceil(sizesDB.result / 5)}`;
       modalTitle[2].innerHTML = ` ${Math.ceil(sizesDB.result / 5)}`;

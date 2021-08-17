@@ -28,5 +28,11 @@
   & .calc-size__button {
     display: none;
   }
+  @media (max-width: 991px) {
+    &__content {
+      width: 105%;
+    }
+  }
+  
 }
 

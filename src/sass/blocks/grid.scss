@@ -6,19 +6,20 @@ body {
   background: url('');
 }
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   @media (max-width: 1199px) {
-    width: 960px;
+    max-width: 960px;
   }
   @media (max-width: 991px) {
-    width: 720px;
+    max-width: 720px;
   }
   @media (max-width: 767px) {
-    width: 540px; 
+    max-width: 540px; 
   }
   @media (max-width: 575px) {
-    width: 565px;
-    padding: 15px;
+    max-width: 565px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

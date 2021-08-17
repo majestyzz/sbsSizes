@@ -31,16 +31,16 @@
       <section class="walls">
         <div class="container">
           <h2 class="walls__title">Расход плитки на стены</h2>
-          <div class="walls__wrapper">
+          <div class="walls__wrapper walls__row">
             
-            <form class="calc-size" action="#">
+            <form class="calc-size walls__element" action="#">
               <h3 class="title">Стены</h3>
               <input class="calc-size__item" type="text" placeholder="введите ширину комнаты" name="width">      
               <input class="calc-size__item" type="text" placeholder="введите длину комнаты" name="long">
               <input class="calc-size__item" type="text" placeholder="введите высоту комнаты" name="height">
               <button class="calc-size__button" type="submit">Посчитать</button>
             </form>
-            <form class="walls__format">
+            <form class="walls__format walls__element">
               <h3 class="walls__desc">Формат плитки</h3>
               <div class="walls__choice">
                 <div class="walls__choice-item">
@@ -57,7 +57,7 @@
                 </div>
               </div>
             </form>
-            <div class="tab">
+            <div class="tab walls__element">
               <ul class="tab__items">
                 <li class="tab__item tab_active">Окна</li>
                 <li class="tab__item">двери</li>
